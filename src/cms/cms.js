@@ -4,16 +4,12 @@ import IndexPagePreview from './components/preview-templates/IndexPagePreview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 
-if (process.env.NODE_ENV === 'development') {
-  const config = {
+CMS.init({
+  config: {
     backend: {
       name: 'github',
-      repo: 'Gabrielbdd/gatsby-starter-netlify-cms',
-      branch: 'develop',
+      repo: 'Gabrielbdd/midiall',
+      branch: process.env.NODE_ENV === 'development' ? 'develop' : 'master',
     },
-  }
-
-  CMS.init(config)
-} else {
-  CMS.init()
-}
+  },
+})
