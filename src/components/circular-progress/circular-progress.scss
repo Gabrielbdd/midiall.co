@@ -1,0 +1,37 @@
+.circular-progress {
+  animation: rotate 1.4s linear infinite;
+  animation-name: rotate;
+  margin: 0 auto;
+  color: currentColor;
+}
+
+.circle {
+  animation: dash 1.4s ease-in-out infinite;
+  animation-name: dash;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0px;
+  stroke: currentColor;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0px;
+  }
+
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px;
+  }
+
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px;
+  }
+}

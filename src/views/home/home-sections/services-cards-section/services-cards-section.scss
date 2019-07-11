@@ -1,0 +1,61 @@
+@import '../../../../style/breakpoints';
+
+.cards-list {
+  grid-row: content;
+  grid-column: content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -12px -50px;
+  padding: 0;
+}
+
+.card-item {
+  flex: 1 1 100%;
+  margin: 0 12px 50px;
+
+  @include md {
+    display: flex;
+    flex: 1 1 40%;
+    max-width: 45%;
+    margin: 0 12px 28px;
+  }
+
+  @include lg {
+    flex: 1 1 30%;
+    max-width: 40%;
+  }
+}
+
+.card {
+  grid-template: 'title' 'description' / 1fr;
+  position: relative;
+  border-radius: 8px;
+  transition: transform 0.5s;
+  padding: 48px 36px;
+  background-color: #e2474f;
+  color: #fff;
+  margin-top: 10px;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 36px;
+  width: 60px;
+}
+
+.card-title {
+  font-size: 1.625rem;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 1rem;
+  margin: 0;
+}

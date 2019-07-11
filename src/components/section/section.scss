@@ -1,0 +1,9 @@
+@import '../../style/breakpoints';
+
+.section {
+  padding: 50px 0;
+
+  @include lg {
+    padding: 100px 80px;
+  }
+}

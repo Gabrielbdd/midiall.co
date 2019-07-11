@@ -1,0 +1,14 @@
+@import '../../../style/breakpoints';
+
+.image {
+  grid-area: image;
+  justify-self: center;
+  width: 100%;
+  max-width: 80%;
+  margin-top: 20px;
+
+  @include lg {
+    max-width: 100%;
+    margin-top: 0;
+  }
+}

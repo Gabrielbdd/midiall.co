@@ -1,0 +1,9 @@
+@import '../../../../style/breakpoints';
+
+.hero-section {
+  padding-top: 110px;
+
+  @include lg {
+    padding-top: 150px;
+  }
+}

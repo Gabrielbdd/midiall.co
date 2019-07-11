@@ -1,0 +1,11 @@
+@import '../../../style/breakpoints';
+
+.section-heading {
+  grid-area: heading;
+  margin: 0;
+  text-align: center;
+
+  @include lg {
+    text-align: left;
+  }
+}

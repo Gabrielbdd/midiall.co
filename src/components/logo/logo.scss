@@ -1,0 +1,9 @@
+@import '../../style/breakpoints';
+
+.logo {
+  height: 21px;
+
+  @include lg {
+    height: 27px;
+  }
+}

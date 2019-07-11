@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: Gabrielbdd/gatsby-starter-netlify-cms
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/index.md'
+        label: 'Home page'
+        name: 'index'
+        fields:
+          - label: 'Template Key'
+            name: 'templateKey'
+            widget: 'hidden'
+            default: 'index-page'
+
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+
+          - label: 'Description'
+            name: 'description'
+            widget: 'string'
+
+          - label: 'Sections'
+            name: 'sections'
+            widget: 'list'
+            types:
+              - label: 'Default section'
+                name: 'default_section'
+                widget: 'object'
+                fields:
+                  - label: 'Heading'
+                    name: 'heading'
+                    widget: 'string'
+                  - label: 'Paragraph'
+                    name: 'paragraph'
+                    widget: 'markdown'
+                    buttons:
+                      - bold
+                      - italic
+                  - label: 'Image'
+                    name: 'image'
+                    widget: 'image'
+                    allow_multiple: false

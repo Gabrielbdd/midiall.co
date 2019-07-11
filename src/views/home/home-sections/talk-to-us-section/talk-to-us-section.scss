@@ -1,0 +1,28 @@
+@import '../../../../style/theme';
+@import '../../../../style/breakpoints';
+
+.ttu-section {
+  background-color: $primary-color;
+}
+
+.ttu-container {
+  display: grid;
+  grid-gap: 30px;
+  justify-items: center;
+}
+
+.ttu-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  display: grid;
+  grid-template: 1fr 1fr / auto;
+  column-gap: 10px;
+  margin: 0;
+
+  @include md {
+    grid-template: 1fr / auto auto;
+    font-size: 40px;
+  }
+}

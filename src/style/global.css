@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', arial, sans-serif;
+  font-weight: 400;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: calc(1.375rem + ((1vw - 3.75px) * 1.6901));
+  line-height: calc(2rem + ((1vw - 3.75px) * 2.2535));
+}
+
+h2 {
+  font-size: calc(1.375rem + ((1vw - 3.75px) * 1.1268));
+  line-height: calc(1.875rem + (6 * ((100vw - 21rem) / 680)));
+}
+
+li {
+  list-style: none;
+}
+
+#hubspot-messages-iframe-container.hidden {
+  display: none !important;
+}

@@ -1,0 +1,82 @@
+@import '../../style/breakpoints';
+
+.ttu-wrapper {
+  padding: 60px 0 20px;
+}
+
+.ttu-container {
+  display: grid;
+  grid-template:
+    'title' auto
+    'form' 1fr
+    / 1fr;
+  grid-column-gap: 30px;
+  align-items: center;
+}
+
+.ttu-title {
+  grid-area: title;
+  justify-self: center;
+  max-width: 600px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.ttu-image {
+  grid-area: image;
+  align-self: end;
+  width: 100%;
+  display: none;
+}
+
+.ttu-form {
+  grid-area: form;
+  display: grid;
+  gap: 20px;
+}
+
+.ttu-form-button {
+  height: 46px;
+}
+
+.ttu-dialog-container {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+
+.ttu-dialog-title {
+  margin: 0;
+}
+
+.ttu-dialog-body {
+  font-size: 1.1rem;
+  line-height: 30px;
+  margin: 0;
+}
+
+.ttu-dialog-image {
+  width: 90%;
+  max-width: 330px;
+}
+
+.ttu-dialog-button {
+  justify-self: end;
+}
+
+@include lg {
+  .ttu-container {
+    grid-template:
+      'title title' auto
+      'image form' 1fr
+      / 1fr 1fr;
+  }
+
+  .ttu-image {
+    display: initial;
+  }
+
+  .ttu-title {
+    margin-bottom: 50px;
+  }
+}

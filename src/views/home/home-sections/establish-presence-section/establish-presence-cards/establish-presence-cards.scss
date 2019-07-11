@@ -1,0 +1,23 @@
+@import '../../../../../style/breakpoints';
+
+.root {
+  padding: 0;
+
+  li:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: $lg - 1) {
+  .card-title {
+    text-align: center;
+  }
+
+  .card-description {
+    text-align: center;
+  }
+
+  .card-image {
+    margin: 0 auto;
+  }
+}

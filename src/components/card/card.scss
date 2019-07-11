@@ -1,0 +1,9 @@
+.card {
+  display: grid;
+  grid-template:
+    'image'
+    'title'
+    'description'
+    / 1fr;
+  row-gap: 10px;
+}

@@ -1,0 +1,9 @@
+@import '../../../../style/breakpoints';
+
+.image {
+  display: none;
+
+  @include lg {
+    display: initial;
+  }
+}

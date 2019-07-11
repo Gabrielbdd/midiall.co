@@ -1,0 +1,28 @@
+@import '../../style/breakpoints';
+
+.directional-container {
+  display: grid;
+  grid-template-areas: 'heading' 'paragraph' 'image' 'extra';
+}
+
+@include lg {
+  .directional-container {
+    column-gap: 80px;
+  }
+
+  .ltr {
+    grid-template:
+      'heading image' auto
+      'paragraph image' auto
+      'extra image' 1fr
+      / 1fr 1fr;
+  }
+
+  .rtl {
+    grid-template:
+      'image heading' auto
+      'image paragraph' auto
+      'image extra' 1fr
+      / 1fr 1fr;
+  }
+}
