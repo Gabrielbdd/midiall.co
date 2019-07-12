@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms-app'
 
-import IndexPagePreview from './components/preview-templates/IndexPagePreview'
+import IndexPagePreview from './components/preview-templates/index-page-preview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 
@@ -18,9 +18,7 @@ if (process.env.NODE_ENV === 'development') {
   CMS.registerBackend('file-system', FileSystemBackend)
 } else {
   config.backend = {
-    name: 'github',
-    repo: 'Gabrielbdd/midiall',
-    branch: process.env.NODE_ENV === 'development' ? 'develop' : 'master',
+    name: 'git-gateway',
   }
 }
 
