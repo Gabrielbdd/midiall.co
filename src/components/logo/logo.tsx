@@ -2,6 +2,7 @@ import { css } from 'linaria'
 import React, { FunctionComponent } from 'react'
 
 import { gte } from '../../style/breakpoints'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const logo = css`
   height: 21px;
@@ -11,6 +12,16 @@ const logo = css`
   }
 `
 
-export const Logo: FunctionComponent = () => (
-  <img className={logo} src="/assets/logo.svg" />
-)
+export const Logo: FunctionComponent = () => {
+  const {
+    file: { publicURL },
+  }: any = useStaticQuery(graphql`
+    query Logo {
+      file(relativePath: { eq: "logo.svg" }) {
+        publicURL
+      }
+    }
+  `)
+
+  return <img className={logo} src={publicURL} />
+}
