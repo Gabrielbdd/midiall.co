@@ -27,9 +27,15 @@ collections:
             widget: 'list'
             types:
               - label: 'Default section'
-                name: 'default_section'
+                name: 'default-section'
                 widget: 'object'
                 fields:
+                  - label: 'Direction'
+                    name: 'direction'
+                    widget: 'select'
+                    options:
+                      - 'ltr'
+                      - 'rtl'
                   - label: 'Heading'
                     name: 'heading'
                     widget: 'string'
